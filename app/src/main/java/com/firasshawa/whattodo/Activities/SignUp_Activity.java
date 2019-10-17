@@ -82,6 +82,10 @@ public class SignUp_Activity extends AppCompatActivity {
         if(!Password_et.getText().toString().isEmpty()){
             if(Password_et.length() > 6){
                 user.setPassword(Password_et.getText().toString().trim());
+            }else{
+                Password_et.setError("The Password More than 6 char");
+                Password_et.requestFocus();
+                return null;
             }
         }else{
             Password_et.setError("Fill The Password Please");
@@ -95,22 +99,22 @@ public class SignUp_Activity extends AppCompatActivity {
 
     public void Signup(){
         UserAuth user = Collect();
+
         if(user != null)
             auth.
-                    createUserWithEmailAndPassword(user.getEmail(),user.getPassword())
-                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isComplete()){
-                                Toast.makeText(getApplicationContext(),"Completed!",Toast.LENGTH_SHORT).show();
+                createUserWithEmailAndPassword(user.getEmail(),user.getPassword())
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(getApplicationContext(),"Completed!",Toast.LENGTH_SHORT).show();
 
-                            }else{
-                                Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(getApplicationContext(),task.getException().toString(),Toast.LENGTH_SHORT).show();
 
-                            }
                         }
-                    });
-
+                    }
+                });
 
     }
 
