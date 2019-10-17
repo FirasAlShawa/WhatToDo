@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "778015523703",
+    "firebase_url": "https://whattodo-9ae3f.firebaseio.com",
+    "project_id": "whattodo-9ae3f",
+    "storage_bucket": "whattodo-9ae3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778015523703:android:84932e9c90dd0d1d109772",
+        "android_client_info": {
+          "package_name": "com.firasshawa.whattodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778015523703-qli5uatboibko07u0atrpojdhs5d6p2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKcGj5AE3xUAiFzPBW1sTTU5fepCgnvUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778015523703-qli5uatboibko07u0atrpojdhs5d6p2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

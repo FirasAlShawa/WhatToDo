@@ -1,13 +1,16 @@
-package com.firasshawa.whattodo;
+package com.firasshawa.whattodo.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.firasshawa.whattodo.R;
+
+public class Signin_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.signin_layout);
     }
 }
