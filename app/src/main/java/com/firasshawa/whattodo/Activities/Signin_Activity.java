@@ -102,6 +102,7 @@ public class Signin_Activity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(getApplicationContext(), "Signed in!", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(Signin_Activity.this,Home_Activity.class));
                     } else {
                         Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
