@@ -4,15 +4,13 @@ public class Profile {
     private String key;
     private String name;
     private String email;
-    private String phone;
     private String imgLink;
     private int count;
 
-    public Profile(String key, String name, String email, String phone, String imgLink, int count) {
+    public Profile(String key, String name, String email, String imgLink, int count) {
         this.key = key;
         this.name = name;
         this.email = email;
-        this.phone = phone;
         this.imgLink = imgLink;
         this.count = count;
     }
@@ -44,14 +42,6 @@ public class Profile {
         this.email = email;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public String getImgLink() {
         return imgLink;
     }
@@ -74,7 +64,6 @@ public class Profile {
                 "key='" + key + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
                 ", imgLink='" + imgLink + '\'' +
                 ", count=" + count +
                 '}';

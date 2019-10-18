@@ -6,5 +6,7 @@
     <string name="NameHint">Name</string>
     <string name="RegisterTextview">Register Now</string>
 
+    <string name="ProfileImageHint">pick a profile picture</string>
+    <string name="ProfileSetup">SetUp your Profile</string>
 
 </resources>

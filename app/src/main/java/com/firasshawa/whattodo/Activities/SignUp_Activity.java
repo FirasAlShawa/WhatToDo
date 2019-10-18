@@ -27,7 +27,7 @@ public class SignUp_Activity extends AppCompatActivity {
 
     //declaration
     TextView RegisterNow_tv ;
-    EditText Email_et,Password_et,Name_et;
+    EditText Email_et,Password_et;
     Button Signup_btn;
 
 
@@ -40,7 +40,6 @@ public class SignUp_Activity extends AppCompatActivity {
 
         //initialization
         RegisterNow_tv = findViewById(R.id.RegisterNow_tv);
-        Name_et = findViewById(R.id.Name_et);
         Email_et = findViewById(R.id.Email_et);
         Password_et = findViewById(R.id.Password_et);
         Signup_btn =findViewById(R.id.Signup_btn);
@@ -56,15 +55,6 @@ public class SignUp_Activity extends AppCompatActivity {
 
     public UserAuth Collect(){
         UserAuth user = new UserAuth();
-
-        if(!Name_et.getText().toString().isEmpty()){
-            user.setName(Name_et.getText().toString().trim());
-        }else{
-            Name_et.setError("Fill The Name Please");
-            Name_et.requestFocus();
-            return null;
-        }
-
 
         if(!Email_et.getText().toString().isEmpty()){
             if(Patterns.EMAIL_ADDRESS.matcher(Email_et.getText().toString().trim()).matches()){
@@ -109,7 +99,7 @@ public class SignUp_Activity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(getApplicationContext(),"Completed!",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(SignUp_Activity.this,Home_Activity.class));
+                            startActivity(new Intent(SignUp_Activity.this,ProfileSetup_Activity.class));
 
                         }else{
                             Toast.makeText(getApplicationContext(),task.getException().toString(),Toast.LENGTH_SHORT).show();
