@@ -202,7 +202,8 @@ public class ProfileSetup_Activity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 //        if(requestCode == REQURESTCODE && resultCode == RESULT_OK){
 //            if(data != null && data.getData() != null){
-                ProfileImagmeURI = data.getData();
+//
+//                ProfileImagmeURI = data.getData();
 //                CropImage.activity()
 //                        .setGuidelines(CropImageView.Guidelines.ON)
 //                        .setAspectRatio(1,1)
@@ -219,6 +220,7 @@ public class ProfileSetup_Activity extends AppCompatActivity {
                     CropImage.ActivityResult result = CropImage.getActivityResult(data);
                     if (resultCode == RESULT_OK) {
                         Uri resultUri = result.getUri();
+                        ProfileImagmeURI = resultUri;
                         try {
                             Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),resultUri);
                             ProfileImage_im.setImageBitmap(bitmap);
